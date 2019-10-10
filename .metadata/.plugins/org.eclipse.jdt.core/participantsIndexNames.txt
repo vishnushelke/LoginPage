@@ -1,5 +1,0 @@
-INDEX VERSION 1.131
-/home/user/Desktop/vishnu/MyJavaPrograms/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1429476495.index
-/MyLoginPage/src
-/home/user/Desktop/vishnu/MyJavaPrograms/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1952744821.index
-/MyLoginPage/src

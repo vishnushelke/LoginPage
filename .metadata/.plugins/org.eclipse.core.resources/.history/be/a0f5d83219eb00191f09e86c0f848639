@@ -1,9 +1,0 @@
-package com.bridgelabz.loginpage.services;
-
-public class LoginPage {
-	public static void isAvailableCustomer(Customer customer)
-	{
-		
-	}
-
-}

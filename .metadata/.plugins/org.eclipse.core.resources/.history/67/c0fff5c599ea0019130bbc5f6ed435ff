@@ -1,8 +1,0 @@
-package com.bridgelabz.loginpage;
-
-import javax.servlet.annotation.WebServlet;
-
-@WebServlet("/login")
-public class Login {
-
-}

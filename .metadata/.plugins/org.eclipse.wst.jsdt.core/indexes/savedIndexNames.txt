@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+/home/user/Desktop/vishnu/MyJavaPrograms/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-1563732180.index
-1429476495.index
-4199904359.index
-1574336134.index
-2930603941.index
-642530915.index
-3842578831.index
