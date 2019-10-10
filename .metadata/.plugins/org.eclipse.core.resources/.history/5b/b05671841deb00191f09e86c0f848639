@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<form action="register">
+<body>
+registration page<br>
+enter name:<input type="text" name="name"><br>
+enter username:<input type="text" name="username"><br>
+enter password:<input type="password" name="password"><br>
+confirm password:<input type="password" name="confirm_password"><br>
+<input type="submit" value="register">
+</body>
+</form>
+</html>

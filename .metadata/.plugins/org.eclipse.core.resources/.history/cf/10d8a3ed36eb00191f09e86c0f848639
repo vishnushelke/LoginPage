@@ -1,0 +1,23 @@
+
+<%@page import="java.sql.ResultSet"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="logout"method="post">
+<%
+ResultSet rs;
+rs=(ResultSet)request.getAttribute("resultSet");
+out.println("logged in successfully!");
+out.println("name: " + rs.getString(1) + "\nusername: " + rs.getString(2) + "\npassword: "
+		+ rs.getString(3));
+%>
+<input type="submit" value="logout">
+</form>
+</body>
+</html>
