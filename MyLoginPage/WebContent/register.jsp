@@ -24,7 +24,7 @@
 						<span class="input-group-text" id="basic-addon1"></span>
 					</div>
 					<input type="text" class="form-control" placeholder="Name"
-						name="name" aria-label="Name" aria-describedby="basic-addon1">
+						name="name" aria-label="Name" aria-describedby="basic-addon1" required>
 				</div>
 
 				<div class="input-group mb-3" align="center">
@@ -33,7 +33,7 @@
 					</div>
 					<input type="text" class="form-control" placeholder="username"
 						name="username" aria-label="Username"
-						aria-describedby="basic-addon1">
+						aria-describedby="basic-addon1" required>
 				</div>
 
 				<div class="input-group mb-3" align="center">
@@ -42,7 +42,7 @@
 					</div>
 					<input type="password" class="form-control" placeholder="Password"
 						name="password" aria-label="Password"
-						aria-describedby="basic-addon1">
+						aria-describedby="basic-addon1" required>
 				</div>
 
 				<div class="input-group mb-3" align="center">
@@ -51,7 +51,7 @@
 					</div>
 					<input type="password" class="form-control"
 						placeholder="Confirm Password" name="confirm_password"
-						aria-label="Confirm Password" aria-describedby="basic-addon1">
+						aria-label="Confirm Password" aria-describedby="basic-addon1"required>
 				</div>
 				<input type="submit" value="register" class="btn btn-dark"><a
 					href="Login.jsp">Login</a>

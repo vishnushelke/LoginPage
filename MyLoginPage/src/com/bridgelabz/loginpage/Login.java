@@ -13,8 +13,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.bridgelabz.loginpage.repo.DbConnector;
+import com.mysql.cj.Session;
 
 @WebServlet("/login")
 public class Login extends HttpServlet {
@@ -40,6 +42,10 @@ public class Login extends HttpServlet {
 				if (rs.getString(2).equals(username)) {
 					if (rs.getString(3).equals(password)) {
 						login = true;
+						HttpSession session = req.getSession();
+//						session.setAttribute("resultSet", rs);
+						session.setAttribute("username", username);
+						session.setAttribute("password", password);
 						req.setAttribute("resultSet", rs);
 						RequestDispatcher rd=req.getRequestDispatcher("/Homepage.jsp");
 						rd.forward(req, res);

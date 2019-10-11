@@ -14,6 +14,16 @@
 		<%
 			ResultSet rs;
 			rs = (ResultSet) request.getAttribute("resultSet");
+			session= request.getSession();
+			response.setHeader("Cache-Control", "no-cache, no-store, must-validate");//HTTP 1.1
+			response.setHeader("Pragma", "no-cache");//HTTP 1.0
+			response.setHeader("Expires", "0");//for proxy server
+			if(session.getAttribute("username")==null)
+				{
+					RequestDispatcher rd=request.getRequestDispatcher("/Login.jsp");
+					rd.forward(request, response);
+				}
+			
 			out.println("logged in successfully!");
 		%>
 		<table class="table" border="1" align="center">
@@ -40,7 +50,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<a href="Login.jsp">Logout</a>
+		<input type="submit" value="logout">
 		</div>
 	</form>
 </body>

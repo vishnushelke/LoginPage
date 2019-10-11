@@ -11,10 +11,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/logout")
 public class logout extends HttpServlet{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	static Connection connection = null;
 	PreparedStatement st = null;
 
@@ -22,8 +27,10 @@ public class logout extends HttpServlet{
 		
 //		ResultSet rs=(ResultSet) req.getAttribute("resultSet");
 		RequestDispatcher rd=req.getRequestDispatcher("Login.jsp");
-		
-		
+		HttpSession session= req.getSession();
+		session.removeAttribute("username");
+		session.removeAttribute("password");
+		rd.forward(req, res);
 		
 	}
 }

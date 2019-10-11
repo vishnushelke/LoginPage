@@ -25,7 +25,7 @@
 					</div>
 					<input type="text" class="form-control" name="username"
 						placeholder="username" aria-label="username"
-						aria-describedby="basic-addon1">
+						aria-describedby="basic-addon1" required>
 				</div>
 				<div class="input-group mb-3">
 					<div class="input-group-prepend">
@@ -33,7 +33,7 @@
 					</div>
 					<input type="password" class="form-control" name="password"
 						placeholder="password" aria-label="password"
-						aria-describedby="basic-addon1">
+						aria-describedby="basic-addon1" required>
 				</div>
 
 				<input type="submit" value="login" class="btn btn-dark"><a
