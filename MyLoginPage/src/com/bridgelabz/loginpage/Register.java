@@ -56,6 +56,10 @@ public class Register extends HttpServlet{
 				RequestDispatcher rd=req.getRequestDispatcher("Login.jsp");
 				rd.forward(req, res);
 			}
+			else
+			{
+				st.executeUpdate();
+			}
 				
 			if(password.equals(confirmPassword))
 			{
