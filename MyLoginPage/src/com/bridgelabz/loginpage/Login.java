@@ -29,7 +29,8 @@ public class Login extends HttpServlet {
 	PreparedStatement st = null;
 
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-		String username = req.getParameter("username");
+		String email = req.getParameter("email");
+		
 		String password = req.getParameter("password");
 		boolean login = false;
 		PrintWriter out = res.getWriter();
@@ -39,12 +40,12 @@ public class Login extends HttpServlet {
 			st = connection.prepareStatement(query);
 			ResultSet rs = st.executeQuery();
 			while (rs.next()) {
-				if (rs.getString(2).equals(username)) {
+				if (rs.getString(2).equals(email)) {
 					if (rs.getString(3).equals(password)) {
 						login = true;
 						HttpSession session = req.getSession();
 //						session.setAttribute("resultSet", rs);
-						session.setAttribute("username", username);
+						session.setAttribute("email", email);
 						session.setAttribute("password", password);
 						req.setAttribute("resultSet", rs);
 						RequestDispatcher rd=req.getRequestDispatcher("/Homepage.jsp");

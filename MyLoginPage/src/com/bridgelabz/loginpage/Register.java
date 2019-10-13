@@ -30,14 +30,14 @@ public class Register extends HttpServlet{
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException
 	{
 		Customer customer = new Customer();
-		String username=req.getParameter("username");
+		String email=req.getParameter("email");
 		String password=req.getParameter("password");
 		String name=req.getParameter("name");
 		String confirmPassword=req.getParameter("confirm_password");
 		
 		customer.setName(name);
 		customer.setPassword(password);
-		customer.setUsername(username);
+		customer.setEmail(email);
 		
 		String query="insert into customer values(?,?,?)";
 		connection=DbConnector.getConnection();
@@ -45,7 +45,7 @@ public class Register extends HttpServlet{
 			st=connection.prepareStatement(query);
 			
 			st.setString(1, name);
-			st.setString(2, username);
+			st.setString(2, email);
 			st.setString(3, password);
 			PrintWriter out=res.getWriter();
 			
@@ -58,7 +58,12 @@ public class Register extends HttpServlet{
 			}
 				
 			if(password.equals(confirmPassword))
-				out.println(st.executeUpdate());
+			{
+				out.println("You are registered successfully\n Login to continue");
+				RequestDispatcher rd=req.getRequestDispatcher("Login.jsp");
+				rd.forward(req, res);
+			}
+				
 		
 			
 		} catch (SQLException e) {

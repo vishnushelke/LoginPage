@@ -31,8 +31,8 @@
 					<div class="input-group-prepend">
 						<span class="input-group-text" id="basic-addon1"></span>
 					</div>
-					<input type="text" class="form-control" placeholder="username"
-						name="username" aria-label="Username"
+					<input type="text" class="form-control" placeholder="email"
+						name="email" aria-label="Email"
 						aria-describedby="basic-addon1" required>
 				</div>
 

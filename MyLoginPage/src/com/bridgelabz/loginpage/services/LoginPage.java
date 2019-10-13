@@ -19,7 +19,7 @@ public class LoginPage {
 		ResultSet rs=stCheck.executeQuery();
 		while(rs.next())
 		{
-			if(rs.getString(2).equals(customer.getUsername()))
+			if(rs.getString(2).equals(customer.getEmail()))
 			{
 				return true;
 			}

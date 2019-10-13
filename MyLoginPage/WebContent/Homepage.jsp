@@ -18,7 +18,7 @@
 			response.setHeader("Cache-Control", "no-cache, no-store, must-validate");//HTTP 1.1
 			response.setHeader("Pragma", "no-cache");//HTTP 1.0
 			response.setHeader("Expires", "0");//for proxy server
-			if(session.getAttribute("username")==null)
+			if(session.getAttribute("email")==null)
 				{
 					RequestDispatcher rd=request.getRequestDispatcher("/Login.jsp");
 					rd.forward(request, response);
@@ -31,7 +31,7 @@
 				<tr>
 					<th width="200" hight="100" scope="col">#</th>
 					<th width="200" hight="100" scope="col">Name</th>
-					<th width="200" hight="100" scope="col">Username</th>
+					<th width="200" hight="100" scope="col">email</th>
 				</tr>
 			</thead>
 			<tbody>

@@ -28,7 +28,7 @@ public class logout extends HttpServlet{
 //		ResultSet rs=(ResultSet) req.getAttribute("resultSet");
 		RequestDispatcher rd=req.getRequestDispatcher("Login.jsp");
 		HttpSession session= req.getSession();
-		session.removeAttribute("username");
+		session.removeAttribute("email");
 		session.removeAttribute("password");
 		rd.forward(req, res);
 		
